@@ -1,0 +1,212 @@
+<mockup version="1.0" skin="sketch" measuredW="1306" measuredH="1054">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="98" y="0" w="900" h="543" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gesti%F3n%20de%20Contratos%20de%20Clientes%0Ahttps%3A//intranet.tmd.pe</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="873" y="141" w="98" h="-1" measuredW="109" measuredH="32" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Consultar</text>
+        <state>focused</state>
+        <icon>SearchIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::DataGrid" x="125" y="295" w="846" h="161" measuredW="807" measuredH="148" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <underline>false</underline>
+        <hasHeader>true</hasHeader>
+        <text>%5B%5D%2CTipo%20Documento%2C%20C%F3digo%2C%20Servicio%2C%20Cliente%2C%20Fecha%20Inicio%2C%20Fecha%20T%E9rmino%2C%20Estado%0A%5Bx%5D%2CContrato%2CC0001%2C%20Pruebas%20de%20Funcionalidad%2C%20Banco%20de%20Cr%E9dito%2C%2001/03/2012%2C%2015/05/2012%2C%20Anulado%0A%5Bx%5D%2CAdenda%2CA0001%2C%20Soporte%20Funcional%2C%20Banco%20de%20Cr%E9dito%2C%2030/03/2012%2C%2015/04/2012%2C%20Anulado%0A%5B%5D%2CContrato%2CC0002%2C%20Servicio%20de%20Hosting%2C%20CPF%2C%2016/05/2012%2C%2020/12/2013%2C%20Vigente%0A%5Bx%5D%2CContrato%2C%20C0003%2C%20Control%20de%20Versiones%2C%20Banco%20Continental%2C12/06/2012%2C%2023/11/2012%2C%20Vigente</text>
+        <selectedIndex>-1</selectedIndex>
+        <borderStyle>square</borderStyle>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="873" y="173" w="98" h="-1" measuredW="105" measuredH="32" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancelar</text>
+        <icon>XIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::Label" x="946" y="665" w="190" h="32" measuredW="178" measuredH="32" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Seleccionar%20Servicio</text>
+        <size>18</size>
+        <color>8388608</color>
+      </controlProperties>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::Label" x="755" y="701" w="-1" h="-1" measuredW="119" measuredH="25" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>L%EDnea%20de%20Servicio%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::Button" x="335" y="771" w="-1" h="-1" measuredW="82" measuredH="28" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Consultar</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="359" y="94" w="418" h="32" measuredW="348" measuredH="32" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Generar%20Reporte%20de%20Contratos/Adendas</text>
+        <size>18</size>
+        <color>8388608</color>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="871" y="460" w="100" h="-1" measuredW="103" measuredH="32" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Imprimir</text>
+        <icon>PrintIcon%7Csmall</icon>
+        <state>up</state>
+      </controlProperties>
+    </control>
+    <control controlID="75" controlTypeID="com.balsamiq.mockups::ComboBox" x="881" y="705" w="288" h="-1" measuredW="68" measuredH="132" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Todos%0AOutsourcing%20de%20Tecnolog%EDa%0ASoftware%20Factory%0AOutsourcing%20de%20Procesos%0AOutsourcing%20de%20Servicios%20de%20Aplicaci%F3n%0AServicios%20de%20Tecnolog%EDa</text>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::Button" x="931" y="842" w="-1" h="-1" measuredW="82" measuredH="28" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Consultar</text>
+      </controlProperties>
+    </control>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::Button" x="1043" y="842" w="-1" h="-1" measuredW="78" measuredH="28" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancelar</text>
+      </controlProperties>
+    </control>
+    <control controlID="66" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="724" y="576" w="572" h="468" measuredW="450" measuredH="400" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gesti%F3n%20de%20Contratos%20de%20Clientes%0Ahttps%3A//intranet.tmd.pe</text>
+      </controlProperties>
+    </control>
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::DataGrid" x="761" y="876" w="510" h="124" measuredW="448" measuredH="148" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>L%EDnea%20de%20Servicio%2C%20Servicio%0AOutsourcing%20de%20Tecnolog%EDa%2C%20%5BServicio%20de%20Hosting%5D%0AOutsourcing%20de%20Tecnolog%EDa%2C%20%5BServicios%20de%20Disaster%20Recovery%5D%0ASoftware%20Factory%2C%20%5BControl%20de%20versiones%5D%0ASoftware%20Factory%2C%20%5BControl%20de%20calidad%20del%20c%F3digo%20fuente%5D</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::FieldSet" x="125" y="133" w="746" h="154" measuredW="200" measuredH="170" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Filtro</text>
+      </controlProperties>
+    </control>
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::Button" x="444" y="771" w="-1" h="-1" measuredW="78" measuredH="28" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancelar</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="600" y="148" w="104" h="25" measuredW="104" measuredH="25" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tipo%20Documento%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::ComboBox" x="600" y="169" w="104" h="-1" measuredW="68" measuredH="72" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Todos%0AContrato%0AAdenda</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Label" x="356" y="150" w="16" h="25" measuredW="15" measuredH="29" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-</text>
+        <size>16</size>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::DateChooser" x="236" y="148" w="111" h="-1" measuredW="106" measuredH="29" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20/%20%20/%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::DateChooser" x="380" y="148" w="107" h="-1" measuredW="106" measuredH="29" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%20/%20%20/%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Label" x="149" y="151" w="-1" h="-1" measuredW="87" measuredH="25" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fecha%20Inicio%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::TextInput" x="236" y="211" w="290" h="-1" measuredW="79" measuredH="29" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="151" y="212" w="62" h="25" measuredW="60" measuredH="25" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Servicio%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Button" x="526" y="211" w="35" h="-1" measuredW="48" measuredH="32" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+        <state>up</state>
+        <icon>SearchIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::TextInput" x="236" y="179" w="290" h="-1" measuredW="79" measuredH="29" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Label" x="149" y="180" w="54" h="25" measuredW="54" measuredH="25" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cliente%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Button" x="526" y="179" w="35" h="-1" measuredW="48" measuredH="32" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+        <state>up</state>
+        <icon>SearchIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::ComboBox" x="739" y="169" w="108" h="-1" measuredW="68" measuredH="112" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Todos%0APor%20Iniciar%0AVigente%0ACerrado%0AAnulado</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Label" x="739" y="149" w="53" h="25" measuredW="53" measuredH="25" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Estado%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="125" y="583" w="572" h="404" measuredW="450" measuredH="400" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gesti%F3n%20de%20Contratos%20de%20Clientes%0Ahttps%3A//intranet.tmd.pe</text>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::DataGrid" x="156" y="805" w="510" h="124" measuredW="219" measuredH="118" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>RUC%2C%20Razon%20Social%0A%5B20131369981%5D%2C%20INEI%0A%5B10445987851%5D%2C%20Guilizzoni%0A%5B20151510036%5D%2C%20QNET</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::Label" x="347" y="665" w="190" h="32" measuredW="167" measuredH="32" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Seleccionar%20Cliente</text>
+        <size>18</size>
+        <color>8388608</color>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Label" x="156" y="701" w="-1" h="-1" measuredW="86" measuredH="25" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Raz%F3n%20Social%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::TextInput" x="251" y="698" w="382" h="-1" measuredW="79" measuredH="29" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="62" controlTypeID="com.balsamiq.mockups::Label" x="156" y="733" w="-1" h="-1" measuredW="38" measuredH="25" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>RUC%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="63" controlTypeID="com.balsamiq.mockups::TextInput" x="251" y="731" w="162" h="-1" measuredW="79" measuredH="29" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
