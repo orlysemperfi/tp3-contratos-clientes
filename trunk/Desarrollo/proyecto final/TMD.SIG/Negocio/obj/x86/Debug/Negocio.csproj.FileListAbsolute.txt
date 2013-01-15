@@ -1,0 +1,16 @@
+D:\TMD_INTEGRADO\TMD.SIG\Negocio\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\TMD_INTEGRADO\TMD.SIG\Negocio\obj\x86\Debug\Negocio.Properties.Resources.resources
+D:\TMD_INTEGRADO\TMD.SIG\Negocio\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\TMD_INTEGRADO\TMD.SIG\Negocio\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\TMD\Negocio\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\TMD\Negocio\obj\x86\Debug\Negocio.Properties.Resources.resources
+E:\TMD\Negocio\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\TMD\Negocio\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\TMD\Negocio\bin\Debug\Negocio.dll
+E:\TMD\Negocio\bin\Debug\Negocio.pdb
+E:\TMD\Negocio\bin\Debug\Datos.dll
+E:\TMD\Negocio\bin\Debug\Entidades.dll
+E:\TMD\Negocio\bin\Debug\Datos.pdb
+E:\TMD\Negocio\bin\Debug\Entidades.pdb
+E:\TMD\Negocio\obj\x86\Debug\Negocio.dll
+E:\TMD\Negocio\obj\x86\Debug\Negocio.pdb

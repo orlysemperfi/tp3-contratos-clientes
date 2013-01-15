@@ -1,0 +1,14 @@
+D:\TMD_INTEGRADO\TMD.SIG\Datos\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\TMD_INTEGRADO\TMD.SIG\Datos\obj\x86\Debug\Datos.Properties.Resources.resources
+D:\TMD_INTEGRADO\TMD.SIG\Datos\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\TMD_INTEGRADO\TMD.SIG\Datos\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\TMD\Datos\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\TMD\Datos\obj\x86\Debug\Datos.Properties.Resources.resources
+E:\TMD\Datos\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\TMD\Datos\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\TMD\Datos\bin\Debug\Datos.dll
+E:\TMD\Datos\bin\Debug\Datos.pdb
+E:\TMD\Datos\bin\Debug\Entidades.dll
+E:\TMD\Datos\bin\Debug\Entidades.pdb
+E:\TMD\Datos\obj\x86\Debug\Datos.dll
+E:\TMD\Datos\obj\x86\Debug\Datos.pdb

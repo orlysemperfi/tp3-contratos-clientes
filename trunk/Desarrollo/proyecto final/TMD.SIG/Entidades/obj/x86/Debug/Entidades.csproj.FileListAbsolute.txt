@@ -1,0 +1,8 @@
+E:\TMD\Entidades\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\TMD\Entidades\obj\x86\Debug\Entidades.Properties.Resources.resources
+E:\TMD\Entidades\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\TMD\Entidades\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\TMD\Entidades\bin\Debug\Entidades.dll
+E:\TMD\Entidades\bin\Debug\Entidades.pdb
+E:\TMD\Entidades\obj\x86\Debug\Entidades.dll
+E:\TMD\Entidades\obj\x86\Debug\Entidades.pdb
