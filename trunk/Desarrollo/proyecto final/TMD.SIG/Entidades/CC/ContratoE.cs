@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Entidades.CC
+{
+    public class ContratoE
+    {
+        public int CODIGO_CONTRATO { get; set; }
+        public string NUMERO_CONTRATO { get; set; }
+        public string NUMERO_BUENA_PRO { get; set; }
+        public string NUMERO_CARTA_FIANZA { get; set; }
+        public DateTime FECHA_INICIO { get; set; }
+        public DateTime FECHA_FIN { get; set; }
+        public decimal MONTO { get; set; }
+        public string DESCRIPCION { get; set; }
+        public DateTime FECHA_TERMINO { get; set; }
+        public string MOTIVO_TERMINO { get; set; }
+        public int CODIGO_CLIENTE { get; set; }
+        public int CODIGO_SERVICIO { get; set; }
+        public string CODIGO_MONEDA { get; set; }
+        public int CODIGO_EMPLEADO_APROB_LEGAL { get; set; }
+        public int CODIGO_EMPLEADO_APROB_COMERCIAL { get; set; }
+        public int CODIGO_EMPLEADO_TERM_COMERCIAL { get; set; }
+        public int CODIGO_EMPLEADO_TERM_LEGAL { get; set; }
+        public int CODIGO_EMPLEADO_ANUL_COMERCIAL { get; set; }
+        public int CODIGO_EMPLEADO_ANUL_LEGAL { get; set; }
+        public string ESTADO { get; set; }
+        public DateTime FECHA_REGISTRO { get; set; }
+
+              
+    }
+}

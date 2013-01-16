@@ -1,4 +1,0 @@
-D:\TMD_INTEGRADO\TMD.SIG\Datos\obj\x86\Debug\ResolveAssemblyReference.cache
-D:\TMD_INTEGRADO\TMD.SIG\Datos\obj\x86\Debug\Datos.Properties.Resources.resources
-D:\TMD_INTEGRADO\TMD.SIG\Datos\obj\x86\Debug\GenerateResource.read.1.tlog
-D:\TMD_INTEGRADO\TMD.SIG\Datos\obj\x86\Debug\GenerateResource.write.1.tlog
