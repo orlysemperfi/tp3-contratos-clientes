@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CC\ContratoDAO.cs" />
+    <Compile Include="CC\IContratoDAO.cs" />
     <Compile Include="GEN\ConexionDAO.cs" />
     <Compile Include="GEN\IOrganizacionDAO.cs" />
     <Compile Include="GEN\OrganizacionDAO.cs" />
@@ -73,7 +76,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CC\" />
     <Folder Include="CR\" />
     <Folder Include="GD\" />
     <Folder Include="IC\" />
