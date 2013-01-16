@@ -11,11 +11,8 @@ namespace Datos.GEN
 
         public string CadenaConexion()
         {
-            SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
-            csb.DataSource = @".";
-            csb.InitialCatalog = "TMD";
-            csb.IntegratedSecurity = true;
-            return csb.ConnectionString;
+
+            return System.Configuration.ConfigurationManager.ConnectionStrings["ConexionConfig"].ToString();
         }
 
         public void EjecutaSentenciaSQL(String SQL)
