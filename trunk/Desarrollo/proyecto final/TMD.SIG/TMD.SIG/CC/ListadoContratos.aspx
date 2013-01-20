@@ -111,23 +111,31 @@
                 <HeaderStyle Width="10%" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
                 <ItemStyle Font-Size="12px" HorizontalAlign="Center" />
               </asp:BoundField>
-              <asp:BoundField HeaderText="Monto" DataField="MONTO" DataFormatString="{0:#,##0.00}">
-                <HeaderStyle Width="7%" HorizontalAlign="Right" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
-                <ItemStyle Font-Size="12px" HorizontalAlign="Right" />
-              </asp:BoundField>
               <asp:TemplateField HeaderText="Moneda">
                 <HeaderStyle Width="4%" HorizontalAlign="Right" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
                 <ItemStyle Font-Size="12px" HorizontalAlign="Right" />
                 <ItemTemplate>
-                  <%# ((MonedaE)DataBinder.Eval(Container.DataItem, "Moneda")).CODIGO_MONEDA %>
+                  <%# double.Parse(DataBinder.Eval(Container.DataItem, "Monto").ToString()).ToString("#,##0.00") + " " + ((MonedaE)DataBinder.Eval(Container.DataItem, "Moneda")).CODIGO_MONEDA%>
                 </ItemTemplate>
               </asp:TemplateField>
               <asp:BoundField HeaderText="Estado" DataField="ESTADO_DESCRIPCION">
                 <HeaderStyle Width="9%" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
                 <ItemStyle Font-Size="12px" HorizontalAlign="Center" Font-Bold="true" />
               </asp:BoundField>
+              <asp:TemplateField HeaderText="Acciones">
+                <HeaderStyle Width="7%" HorizontalAlign="Center" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
+                <ItemStyle Font-Size="12px" HorizontalAlign="Center" />
+                <ItemTemplate>
+                  <asp:LinkButton ID="btnAprobarContrato" runat="server" Text="Aprobar" 
+                                  OnClick="btnAprobarContrato_Click" />
+                </ItemTemplate>
+              </asp:TemplateField>
             </Columns>
           </asp:GridView>
+        </td>
+      </tr>
+      <tr style="height:10px">
+        <td colspan="7" align="right">
         </td>
       </tr>
     </table>
