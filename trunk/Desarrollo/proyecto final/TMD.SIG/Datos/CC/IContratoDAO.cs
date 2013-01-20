@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 using Entidades.CC;
 
-namespace Datos.CC
-{
-    public interface IContratoDAO
-    {
-        List<ContratoE> GetContratos();
-    }
+namespace Datos.CC {
+
+  public interface IContratoDAO {
+
+    List<ContratoE> GetContratos();
+    //ContratoE Find(int codigoContrato);
+    //void Update(ContratoE o);
+    
+  }
+
 }
