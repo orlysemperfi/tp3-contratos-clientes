@@ -53,7 +53,17 @@ namespace TMD.SIG {
     }
 
     protected void btnAprobarContrato_Click(object sender, EventArgs e) {
-      CargarListaContratos();
+      //
+    }
+
+    protected void grdListadoContratos_RowDataBound(object sender, GridViewRowEventArgs e) {
+      if (e.Row.RowType.Equals(DataControlRowType.DataRow)) {
+        ContratoE contrato = (ContratoE)e.Row.DataItem;
+        ImageButton btnAprobarContrato = (ImageButton)e.Row.FindControl("btnAprobarContrato");
+        if (btnAprobarContrato != null) {
+          btnAprobarContrato.OnClientClick = string.Format("window.showModalDialog('FormCambioEstadoContrato.aspx?idContrato={0}', null, 'dialogWidth:700px; dialogHeight:500px; center:yes');", contrato.CODIGO_CONTRATO);
+        }
+      }
     }
     
 

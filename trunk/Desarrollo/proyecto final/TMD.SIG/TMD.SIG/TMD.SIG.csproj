@@ -56,8 +56,10 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="CC\FormCambioEstadoContrato.aspx" />
     <Content Include="CC\ListadoContratos.aspx" />
     <Content Include="GEN\organizacion.aspx" />
+    <Content Include="Imagenes\change_status.png" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -108,12 +110,26 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CC\FormCambioEstadoContrato.aspx.cs">
+      <DependentUpon>FormCambioEstadoContrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CC\FormCambioEstadoContrato.aspx.designer.cs">
+      <DependentUpon>FormCambioEstadoContrato.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CC\ListadoContratos.aspx.cs">
       <DependentUpon>ListadoContratos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CC\ListadoContratos.aspx.designer.cs">
       <DependentUpon>ListadoContratos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popup.Master.cs">
+      <DependentUpon>Popup.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popup.Master.designer.cs">
+      <DependentUpon>Popup.Master</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -158,6 +174,9 @@
       <Project>{05552EFC-A17B-43A0-AC5E-641AB8512448}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Popup.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

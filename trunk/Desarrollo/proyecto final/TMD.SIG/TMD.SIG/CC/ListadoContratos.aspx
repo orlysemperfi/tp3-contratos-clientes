@@ -75,7 +75,8 @@
         <td colspan="7">
           <asp:GridView ID="grdListadoContratos" runat="server"  Width="100%" 
                         AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" 
-                        CellSpacing="1" GridLines="None" PageSize="25">
+                        CellSpacing="1" GridLines="None" PageSize="25" 
+            onrowdatabound="grdListadoContratos_RowDataBound">
             <Columns>
               <asp:BoundField HeaderText="ID" DataField="CODIGO_CONTRATO">
                 <HeaderStyle Width="2%" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
@@ -126,8 +127,8 @@
                 <HeaderStyle Width="7%" HorizontalAlign="Center" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
                 <ItemStyle Font-Size="12px" HorizontalAlign="Center" />
                 <ItemTemplate>
-                  <asp:LinkButton ID="btnAprobarContrato" runat="server" Text="Aprobar" 
-                                  OnClick="btnAprobarContrato_Click" />
+                  <asp:ImageButton ID="btnAprobarContrato" runat="server" Text="Cambiar Estado" ImageUrl="~/Imagenes/change_status.png"
+                                   OnClick="btnAprobarContrato_Click" ToolTip="Cambiar Estado" Height="24px" Width="24px" />
                 </ItemTemplate>
               </asp:TemplateField>
             </Columns>

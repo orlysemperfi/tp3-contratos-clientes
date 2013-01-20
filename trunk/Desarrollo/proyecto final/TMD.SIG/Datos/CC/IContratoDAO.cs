@@ -10,9 +10,10 @@ namespace Datos.CC {
   public interface IContratoDAO {
 
     List<ContratoE> GetContratos();
-    //ContratoE Find(int codigoContrato);
-    //void Update(ContratoE o);
-    
+    ContratoE GetContrato(int codigoContrato);
+    void ActualizarSiguienteEstado(int codigoContrato, string estado, string motivo);
+    void ActualizarAdendasYOtros(int codigoContrato, string estado, string motivo);
+
   }
 
 }

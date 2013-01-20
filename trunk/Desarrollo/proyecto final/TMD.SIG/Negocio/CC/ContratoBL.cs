@@ -28,6 +28,18 @@ namespace Negocio.CC {
       return contratoDao.GetContratos();
     }
 
+    public ContratoE GetContrato(int codigoContrato) {
+      return contratoDao.GetContrato(codigoContrato);
+    }
+
+    public void ActualizarSiguienteEstado(int codigoContrato, string estado, string motivo) {
+      contratoDao.ActualizarSiguienteEstado(codigoContrato, estado, motivo);
+    }
+
+    public void ActualizarAdendasYOtros(int codigoContrato, string estado, string motivo) {
+      contratoDao.ActualizarAdendasYOtros(codigoContrato, estado, motivo);
+    }
+
   }
 
 }
