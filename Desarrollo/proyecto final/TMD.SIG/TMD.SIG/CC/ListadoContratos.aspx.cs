@@ -52,6 +52,11 @@ namespace TMD.SIG {
       ddlFiltroServicio.SelectedIndex = 0;
     }
 
+    protected void btnAprobarContrato_Click(object sender, EventArgs e) {
+      CargarListaContratos();
+    }
+    
+
   }
 
 }
