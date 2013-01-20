@@ -194,6 +194,15 @@ namespace Datos {
     /// <param name="SQL">Consulta SQL a ejecutarse.</param>
     /// <returns>Colección de datos resultado de la consulta.</returns>
     public DbDataReader GetSqlCursor(string SQL) {
+      return GetSqlCursor(SQL, null);
+    }
+
+    /// <summary>
+    /// Función que ejecuta una sentencia directa de SQL (con parametros).
+    /// </summary>
+    /// <param name="SQL">Consulta SQL a ejecutarse.</param>
+    /// <returns>Colección de datos resultado de la consulta.</returns>
+    public DbDataReader GetSqlCursor(string SQL, List<DbParameter> listaParametros) {
       DbDataReader resultado = null;
       DbCommand cm = null;
       try {
@@ -203,6 +212,9 @@ namespace Datos {
         }
         cm.CommandText = SQL;
         cm.CommandType = CommandType.Text;
+        if (listaParametros != null) {
+          cm.Parameters.AddRange(listaParametros.ToArray());
+        }
         resultado = cm.ExecuteReader();
         if (IsStartTransaction) {
           cm.Transaction.Commit();
@@ -221,12 +233,16 @@ namespace Datos {
       return resultado;
     }
 
+    public void ExecuteSqlUpdate(string SQL) {
+      ExecuteSqlUpdate(SQL, null);
+    }
+
     /// <summary>
-    /// Función que devuelve un objeto OracleCommand (con SQL).
+    /// Función que ejecuta una sentencia directa de SQL (con parametros).
     /// </summary>
     /// <param name="SQL">Consulta SQL a ejecutarse.</param>
     /// <returns>Colección de datos resultado de la consulta.</returns>
-    public DbCommand ExecuteSqlUpdate(string SQL) {
+    public void ExecuteSqlUpdate(string SQL, List<DbParameter> listaParametros) {
       DbCommand cm = null;
       try {
         cm = DBConnection.CreateCommand();
@@ -235,10 +251,24 @@ namespace Datos {
         }
         cm.CommandText = SQL;
         cm.CommandType = CommandType.Text;
+        if (listaParametros != null) {
+          cm.Parameters.AddRange(listaParametros.ToArray());
+        }
+        cm.ExecuteNonQuery();
+        if (IsStartTransaction) {
+          cm.Transaction.Commit();
+        }
       } catch (Exception ex) {
+        if (IsStartTransaction) {
+          cm.Transaction.Rollback();
+        }
         throw ex;
+      } finally {
+        if (cm != null) {
+          cm.Dispose();
+          cm = null;
+        }
       }
-      return cm;
     }
 
     /// <summary>
