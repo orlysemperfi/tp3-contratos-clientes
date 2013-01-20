@@ -45,6 +45,66 @@ namespace Datos.CC {
       return listaContratos;
     }
 
+    public List<ContratoE> GetContratos(string numeroContrato, string descripcion, int codigoServicio, string cliente) {
+      sqlHelper = new SqlServerHelper();
+      List<ContratoE> listaContratos = new List<ContratoE>();
+      List<DbParameter> listaParams = new List<DbParameter>();
+      try {
+        StringBuilder sql = new StringBuilder();
+        sql.Append("SELECT C.*, ")
+           .Append("       CLI.RAZON_SOCIAL, CLI.RUC, CLI.TIPO_CLIENTE, CLI.DIRECCION, CLI.TELEFONO, CLI.CORREO, CLI.FAX, ")
+           .Append("       CLI.CONTACTO, CLI.ESTADO, CLI.FECHA_INGRESO, ")
+           .Append("       SERV.DESCRIPCION AS DESCRIPCION_SERVICIO, MON.NOMBRE AS NOMBRE_MONEDA ")
+           .Append("  FROM CC.CONTRATO C ")
+           .Append("       INNER JOIN CR.CLIENTE CLI ON ( C.CODIGO_CLIENTE = CLI.CODIGO_CLIENTE ) ")
+           .Append("       INNER JOIN CC.SERVICIO SERV ON ( C.CODIGO_SERVICIO = SERV.CODIGO_SERVICIO ) ")
+           .Append("       INNER JOIN CC.MONEDA MON ON ( C.CODIGO_MONEDA = MON.CODIGO_MONEDA ) ")
+           .Append(" WHERE 1 = 1 ");
+        if (!string.IsNullOrEmpty(numeroContrato)) {
+          sql.Append(" AND C.NUMERO_CONTRATO = @NumeroContrato ");
+          listaParams.Add(new SqlParameter() {
+            ParameterName = "NumeroContrato",
+            DbType = System.Data.DbType.String,
+            Value = numeroContrato
+          });
+        }
+        if (!string.IsNullOrEmpty(descripcion)) {
+          sql.Append(" AND C.DESCRIPCION LIKE @Descripcion ");
+          listaParams.Add(new SqlParameter() {
+            ParameterName = "Descripcion",
+            DbType = System.Data.DbType.String,
+            Value = "%" + descripcion + "%"
+          });
+        }
+        if (codigoServicio > 0) {
+          sql.Append(" AND C.CODIGO_SERVICIO = @CodigoServicio ");
+          listaParams.Add(new SqlParameter() {
+            ParameterName = "CodigoServicio",
+            DbType = System.Data.DbType.Int32,
+            Value = codigoServicio
+          });
+        }
+        if (!string.IsNullOrEmpty(cliente)) {
+          sql.Append(" AND CLI.RAZON_SOCIAL = @NombreCliente ");
+          listaParams.Add(new SqlParameter() {
+            ParameterName = "NombreCliente",
+            DbType = System.Data.DbType.String,
+            Value = "%" + cliente + "%"
+          });
+        }
+        IDataReader reader = sqlHelper.GetSqlCursor(sql.ToString(), listaParams);
+        while (reader.Read()) {
+          ContratoE contrato = GetInternalContrato(reader);
+          listaContratos.Add(contrato);
+        }
+      } catch (System.Exception ex) {
+        Console.WriteLine(ex.Message);
+      } finally {
+        sqlHelper.EndConnection();
+      }
+      return listaContratos;
+    }
+
     public ContratoE GetContrato(int codigoContrato) {
       sqlHelper = new SqlServerHelper();
       try {

@@ -28,6 +28,10 @@ namespace Negocio.CC {
       return contratoDao.GetContratos();
     }
 
+    public List<ContratoE> GetContratos(string numeroContrato, string descripcion, int codigoServicio, string cliente) {
+      return contratoDao.GetContratos(numeroContrato, descripcion, codigoServicio, cliente);
+    }
+
     public ContratoE GetContrato(int codigoContrato) {
       return contratoDao.GetContrato(codigoContrato);
     }
