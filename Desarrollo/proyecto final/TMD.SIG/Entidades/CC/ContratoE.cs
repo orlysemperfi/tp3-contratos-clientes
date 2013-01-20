@@ -35,6 +35,21 @@ namespace Entidades.CC {
     public ServicioE Servicio { get; set; }
     public MonedaE Moneda { get; set; }
 
+    public string ESTADO_DESCRIPCION {
+      get {
+        if (!string.IsNullOrEmpty(ESTADO)) {
+          if (ESTADO.Equals("R")) {
+            return "RESCINDIDO";
+          } else if (ESTADO.Equals("F")) {
+            return "FIRMADO";
+          } else if (ESTADO.Equals("E")) {
+            return "ELABORADO";
+          }
+        }
+        return "DESCONOCIDO";
+      }
+    }
+
   }
 
 }

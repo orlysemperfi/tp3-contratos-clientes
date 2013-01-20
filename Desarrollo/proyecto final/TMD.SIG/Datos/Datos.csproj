@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CC\IServicioDAO.cs" />
+    <Compile Include="CC\SqlServerServicioDAO.cs" />
     <Compile Include="CC\IContratoDAO.cs" />
     <Compile Include="CC\SqlServerContratoDAO.cs" />
     <Compile Include="DBHelper.cs" />
