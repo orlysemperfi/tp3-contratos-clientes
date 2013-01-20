@@ -49,7 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CR\ClienteE.cs" />
     <Compile Include="CC\ContratoE.cs" />
+    <Compile Include="CC\LineaServicioE.cs" />
+    <Compile Include="CC\MonedaE.cs" />
+    <Compile Include="CC\ServicioE.cs" />
     <Compile Include="GEN\OrganizacionE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

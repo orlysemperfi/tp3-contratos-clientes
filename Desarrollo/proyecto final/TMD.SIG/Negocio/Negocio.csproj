@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CC\ContratoBL.cs" />
+    <Compile Include="CC\IContratoBL.cs" />
     <Compile Include="Generico\IOrganizacionBL.cs" />
     <Compile Include="Generico\OrganizacionBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
