@@ -36,7 +36,7 @@ namespace TMD.SIG {
     }
 
     private void CargarListaContratos() {
-      List<ContratoE> listaContratos = ContratoController.GetContratos();
+      List<ContratoE> listaContratos = ContratoController.GetContratos(txtFiltroNumeroContrato.Text, txtFiltroDescripcion.Text, int.Parse(ddlFiltroServicio.SelectedValue), txtFiltroNombreCliente.Text);
       grdListadoContratos.DataSource = listaContratos;
       grdListadoContratos.DataBind();
     }
