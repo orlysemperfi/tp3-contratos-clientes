@@ -28,7 +28,7 @@ namespace Datos.CC {
            .Append("       CLI.CONTACTO, CLI.ESTADO, CLI.FECHA_INGRESO, ")
            .Append("       SERV.DESCRIPCION AS DESCRIPCION_SERVICIO, MON.NOMBRE AS NOMBRE_MONEDA ")
            .Append("  FROM CC.CONTRATO C ")
-           .Append("       INNER JOIN CC.CLIENTE CLI ON ( C.CODIGO_CLIENTE = CLI.CODIGO_CLIENTE ) ")
+           .Append("       INNER JOIN CR.CLIENTE CLI ON ( C.CODIGO_CLIENTE = CLI.CODIGO_CLIENTE ) ")
            .Append("       INNER JOIN CC.SERVICIO SERV ON ( C.CODIGO_SERVICIO = SERV.CODIGO_SERVICIO ) ")
            .Append("       INNER JOIN CC.MONEDA MON ON ( C.CODIGO_MONEDA = MON.CODIGO_MONEDA ) ");
         IDataReader reader = sqlHelper.GetSqlCursor(sql.ToString());
@@ -55,7 +55,7 @@ namespace Datos.CC {
               CORREO = reader["CORREO"] != null ? reader["CORREO"].ToString() : string.Empty,
               FAX = reader["FAX"] != null ? reader["FAX"].ToString() : string.Empty,
               CONTACTO = reader["CONTACTO"].ToString(),
-              ESTADO = bool.Parse(reader["ESTADO"].ToString()),
+              //ESTADO = bool.Parse(reader["ESTADO"].ToString()),
               FECHA_INGRESO = Convert.ToDateTime(reader["FECHA_INGRESO"].ToString())
             },
             Servicio = new ServicioE() {
@@ -67,7 +67,7 @@ namespace Datos.CC {
               NOMBRE = reader["NOMBRE_MONEDA"].ToString()
             }
           };
-          if (reader["FECHA_TERMINO"] != null) {
+          if (reader["FECHA_TERMINO"] != DBNull.Value) {
             bean.FECHA_TERMINO = Convert.ToDateTime(reader["FECHA_TERMINO"].ToString());
           }
           listaContratos.Add(bean);
