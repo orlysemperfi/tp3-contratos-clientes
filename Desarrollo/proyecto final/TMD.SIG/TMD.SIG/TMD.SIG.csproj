@@ -56,6 +56,8 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="CC\FormCambioEstadoAdenda.aspx" />
+    <Content Include="CC\ListadoAdendas.aspx" />
     <Content Include="CC\FormCambioEstadoContrato.aspx" />
     <Content Include="CC\ListadoContratos.aspx" />
     <Content Include="GEN\organizacion.aspx" />
@@ -110,6 +112,20 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CC\FormCambioEstadoAdenda.aspx.cs">
+      <DependentUpon>FormCambioEstadoAdenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CC\FormCambioEstadoAdenda.aspx.designer.cs">
+      <DependentUpon>FormCambioEstadoAdenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CC\ListadoAdendas.aspx.cs">
+      <DependentUpon>ListadoAdendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CC\ListadoAdendas.aspx.designer.cs">
+      <DependentUpon>ListadoAdendas.aspx</DependentUpon>
     </Compile>
     <Compile Include="CC\FormCambioEstadoContrato.aspx.cs">
       <DependentUpon>FormCambioEstadoContrato.aspx</DependentUpon>

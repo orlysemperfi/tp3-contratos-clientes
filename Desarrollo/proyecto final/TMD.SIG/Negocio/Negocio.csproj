@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CC\ContratoBL.cs" />
+    <Compile Include="CC\AdendaBL.cs" />
+    <Compile Include="CC\IAdendaBL.cs" />
     <Compile Include="CC\ServicioBL.cs" />
     <Compile Include="CC\IServicioBL.cs" />
     <Compile Include="CC\IContratoBL.cs" />

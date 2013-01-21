@@ -44,6 +44,8 @@ namespace Entidades.CC {
             return "FIRMADO";
           } else if (ESTADO.Equals("E")) {
             return "ELABORADO";
+          } else if (ESTADO.Equals("C")) {
+            return "CONCLUIDO";
           }
         }
         return "DESCONOCIDO";

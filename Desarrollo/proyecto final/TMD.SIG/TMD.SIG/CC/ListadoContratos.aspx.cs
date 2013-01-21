@@ -62,12 +62,12 @@ namespace TMD.SIG {
         ImageButton btnVerContrato = (ImageButton)e.Row.FindControl("btnVerContrato");
         ImageButton btnAprobarContrato = (ImageButton)e.Row.FindControl("btnAprobarContrato");
         if (btnVerContrato != null) {
-          btnVerContrato.OnClientClick = string.Format("window.showModalDialog('FormCambioEstadoContrato.aspx?tipo=Ver&idContrato={0}', null, 'dialogWidth:700px; dialogHeight:450px; center:yes');", contrato.CODIGO_CONTRATO);
+          btnVerContrato.OnClientClick = string.Format("window.showModalDialog('FormCambioEstadoContrato.aspx?tipo=Ver&idContrato={0}', null, 'dialogWidth:700px; dialogHeight:500px; center:yes');", contrato.CODIGO_CONTRATO);
         }
         if (btnAprobarContrato != null) {
           btnAprobarContrato.Visible = !contrato.ESTADO.Equals("R") && !contrato.ESTADO.Equals("C");
           if (btnAprobarContrato.Visible) {
-            btnAprobarContrato.OnClientClick = string.Format("window.showModalDialog('FormCambioEstadoContrato.aspx?tipo=Cambiar&idContrato={0}', null, 'dialogWidth:700px; dialogHeight:450px; center:yes');", contrato.CODIGO_CONTRATO);
+            btnAprobarContrato.OnClientClick = string.Format("window.showModalDialog('FormCambioEstadoContrato.aspx?tipo=Cambiar&idContrato={0}', null, 'dialogWidth:700px; dialogHeight:500px; center:yes');", contrato.CODIGO_CONTRATO);
           }
         }
       }
