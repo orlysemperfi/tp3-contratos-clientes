@@ -59,6 +59,7 @@
     <Content Include="CC\FormCambioEstadoContrato.aspx" />
     <Content Include="CC\ListadoContratos.aspx" />
     <Content Include="GEN\organizacion.aspx" />
+    <Content Include="Imagenes\view.png" />
     <Content Include="Imagenes\change_status.png" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />

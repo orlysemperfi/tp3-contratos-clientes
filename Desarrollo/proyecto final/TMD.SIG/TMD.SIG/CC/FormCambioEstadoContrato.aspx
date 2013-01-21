@@ -92,7 +92,25 @@
       <tr>
         <td colspan="7"><hr /></td>
       </tr>
-      <tr>
+      <tr id="trMotivoVer" runat="server">
+        <td class="labelForms">
+          Motivo:
+        </td>
+        <td>&nbsp;</td>
+        <td class="controlForms" colspan="5">
+          <asp:Label ID="txtMotivoVer" runat="server" />
+        </td>
+      </tr>
+      <tr id="trFechaTerminoVer" runat="server">
+        <td class="labelForms">
+          Fecha de Actualizacion:
+        </td>
+        <td>&nbsp;</td>
+        <td class="controlForms" colspan="5">
+          <asp:Label ID="txtFechaTermino" runat="server" />
+        </td>
+      </tr>
+      <tr id="trEstadoCambiar" runat="server">
         <td class="labelForms">
           Estado:
         </td>
@@ -101,13 +119,13 @@
           <asp:DropDownList ID="ddlProximoEstado" runat="server" />
         </td>
       </tr>
-      <tr id="trMotivo" runat="server">
+      <tr id="trMotivoCambiar" runat="server">
         <td class="labelForms">
           Motivo:
         </td>
         <td>&nbsp;</td>
         <td class="controlForms" colspan="5">
-          <asp:TextBox ID="txtMotivo" runat="server" TextMode="MultiLine" Rows="4" Width="100%" />
+          <asp:TextBox ID="txtMotivoCambiar" runat="server" TextMode="MultiLine" Rows="4" Width="100%" />
         </td>
       </tr>
       <tr style="height:10px">
@@ -116,7 +134,7 @@
       <tr style="height:10px">
         <td colspan="7" align="right">
           <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="boton_01" 
-            onclick="btnAceptar_Click" OnClientClick="return confirm('Esta seguro que desea realizar esta accion?\nUna vez ejecutada dicha accion, ya no se puede volver atras.')" />&nbsp;
+            OnClick="btnAceptar_Click" OnClientClick="return confirm('Esta seguro que desea realizar esta accion?\nUna vez ejecutada dicha accion, ya no se puede volver atras.')" />&nbsp;
           <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="boton_01" 
             CausesValidation="false" OnClientClick="window.close();" />
         </td>
