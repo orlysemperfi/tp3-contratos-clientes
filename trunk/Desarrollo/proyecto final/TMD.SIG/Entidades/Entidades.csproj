@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CC\AdendaE.cs" />
+    <Compile Include="CC\EstadoAdendaE.cs" />
     <Compile Include="CC\EstadoContratoE.cs" />
     <Compile Include="CR\ClienteE.cs" />
     <Compile Include="CC\ContratoE.cs" />

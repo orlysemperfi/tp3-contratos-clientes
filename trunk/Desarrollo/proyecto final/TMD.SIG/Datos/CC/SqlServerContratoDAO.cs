@@ -223,35 +223,6 @@ namespace Datos.CC {
       return contrato;
     }
 
-
-    //public void Insert(OrganizacionE o) {
-
-    //  ConexionDAO cn = new ConexionDAO();
-
-    //  using (SqlConnection con = new SqlConnection(cn.CadenaConexion())) {
-    //    try {
-    //      con.Open();
-
-    //      SqlCommand cmd = new SqlCommand("GEN.ORGANIZACION_INS", con);
-
-    //      cmd.CommandType = CommandType.StoredProcedure;
-
-    //      cmd.Parameters.Add(new SqlParameter("@Codigo", o.codigoOrganizacion));
-    //      cmd.Parameters.Add(new SqlParameter("@Nombre", o.nombre));
-    //      cmd.Parameters.Add(new SqlParameter("@Mision", o.mision));
-    //      cmd.Parameters.Add(new SqlParameter("@Vision", o.vision));
-
-    //      int response = cmd.ExecuteNonQuery();
-
-    //      cmd.Dispose();
-    //    } catch (System.Exception ex) {
-    //      Console.WriteLine(ex.Message);
-    //    } finally {
-    //      con.Close();
-    //    }
-    //  }
-    //}
-
   }
 
 }

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Cambio de Estado de Contrato" Language="C#"
          MasterPageFile="~/Popup.master" AutoEventWireup="true"
-         CodeBehind="FormCambioEstadoContrato.aspx.cs"
-         Inherits="TMD.SIG.FormCambioEstadoContrato" %>
+         CodeBehind="FormCambioEstadoAdenda.aspx.cs"
+         Inherits="TMD.SIG.FormCambioEstadoAdenda" %>
 
 <%@ Import Namespace="Entidades.CC" %>
 <%@ Import Namespace="Entidades.CR" %>
@@ -10,16 +10,16 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h2>Aprobar Contrato</h2>
+    <h2>Aprobar Adenda</h2>
     <hr />
-    <p>Permite cambiar el estado de un Contrato o Adenda.</p>
+    <p>Permite cambiar el estado de una Adenda.</p>
     <table width="100%" align="center" border="0" cellpadding="1" cellspacing="1">
       <tr style="height:10px">
         <td colspan="7"></td>
       </tr>
       <tr>
         <td colspan="7">
-          <b>Informacion General</b>
+          <b>Informacion del Contrato</b>
         </td>
       </tr>
       <tr>
@@ -35,7 +35,7 @@
         </td>
         <td width="2%">&nbsp;</td>
         <td class="labelForms" width="23%">
-          Estado:
+          Estado del Contrato:
         </td>
         <td width="1%">&nbsp;</td>
         <td class="controlForms" width="25%">
@@ -99,28 +99,27 @@
       </tr>
       <tr>
         <td colspan="7">
-          <b>Estado de Contrato</b>
+          <b>Informacion y Estado de Adenda</b>
         </td>
       </tr>
       <tr>
         <td colspan="7"><hr /></td>
       </tr>
-      <tr id="trMotivoVer" runat="server">
+      <tr>
         <td class="labelForms">
-          Motivo:
+          N° de Adenda:
         </td>
         <td>&nbsp;</td>
-        <td class="controlForms" colspan="5">
-          <asp:Label ID="txtMotivoVer" runat="server" />
-        </td>
-      </tr>
-      <tr id="trFechaTerminoVer" runat="server">
-        <td class="labelForms">
-          Fecha de Actualizacion:
+        <td class="controlForms">
+          <asp:Label ID="txtNumeroAdenda" runat="server" />
         </td>
         <td>&nbsp;</td>
-        <td class="controlForms" colspan="5">
-          <asp:Label ID="txtFechaTermino" runat="server" />
+        <td class="labelForms">
+          Estado de la Adenda:
+        </td>
+        <td>&nbsp;</td>
+        <td class="controlForms">
+          <asp:Label ID="txtEstadoAdenda" runat="server" Font-Bold="true" Font-Size="14px" />
         </td>
       </tr>
       <tr id="trEstadoCambiar" runat="server">
@@ -130,15 +129,6 @@
         <td>&nbsp;</td>
         <td class="controlForms" colspan="5">
           <asp:DropDownList ID="ddlProximoEstado" runat="server" />
-        </td>
-      </tr>
-      <tr id="trMotivoCambiar" runat="server">
-        <td class="labelForms">
-          Motivo:
-        </td>
-        <td>&nbsp;</td>
-        <td class="controlForms" colspan="5">
-          <asp:TextBox ID="txtMotivoCambiar" runat="server" TextMode="MultiLine" Rows="4" Width="100%" />
         </td>
       </tr>
       <tr style="height:10px">
