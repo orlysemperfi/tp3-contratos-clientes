@@ -45,6 +45,10 @@ namespace TMD.SIG {
           if (paramTipo.Equals("Cambiar")) {
             //** Llenar la informacion del combo de estado
             List<EstadoAdendaE> listaEstadoAdenda = new List<EstadoAdendaE>();
+            listaEstadoAdenda.Add(new EstadoAdendaE() {
+              CODIGO = "",
+              NOMBRE = "Seleccione..."
+            });
             if (adenda.ESTADO.Equals("P")) {
               listaEstadoAdenda.Add(new EstadoAdendaE() {
                 CODIGO = "F",
@@ -76,7 +80,7 @@ namespace TMD.SIG {
         //** Actualizar el estado de la adenda
         AdendaController.ActualizarSiguienteEstado(codigoAdenda, ddlProximoEstado.SelectedValue);
       }
-      
+      ClientScript.RegisterStartupScript(this.GetType(), "JS-CloseWindow", "window.close();", true);
     }
 
     protected void btnAprobarContrato_Click(object sender, EventArgs e) {

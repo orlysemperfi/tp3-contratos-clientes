@@ -11,6 +11,7 @@
 </head>
 <body>
     <form id="Form1" runat="server">
+    <asp:HiddenField ID="hdnPostBackAction" runat="server" />
     <div class="page">
         <div class="header">
             <div class="title">

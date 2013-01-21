@@ -19,6 +19,10 @@ namespace TMD.SIG {
       if (!IsPostBack) {
         CargarListaCombos();
         CargarListaAdendas();
+      } else {
+        if (Request["ctl00$hdnPostBackAction"].Equals("btnBuscar")) {
+          CargarListaAdendas();
+        }
       }
     }
 
@@ -36,7 +40,10 @@ namespace TMD.SIG {
     }
 
     private void CargarListaAdendas() {
-      List<AdendaE> listaAdendas = AdendaController.GetAdendas(txtFiltroNumeroContrato.Text, txtFiltroNumeroAdenda.Text, int.Parse(ddlFiltroServicio.SelectedValue), txtFiltroNombreCliente.Text);
+      List<AdendaE> listaAdendas = AdendaController.GetAdendas(txtFiltroNumeroContrato.Text,
+                                                               txtFiltroNumeroAdenda.Text,
+                                                               int.Parse(ddlFiltroServicio.SelectedValue),
+                                                               null);
       grdListadoAdendas.DataSource = listaAdendas;
       grdListadoAdendas.DataBind();
     }
@@ -48,7 +55,6 @@ namespace TMD.SIG {
     protected void btnLimpiar_Click(object sender, EventArgs e) {
       txtFiltroNumeroContrato.Text = string.Empty;
       txtFiltroNumeroAdenda.Text = string.Empty;
-      txtFiltroNombreCliente.Text = string.Empty;
       ddlFiltroServicio.SelectedIndex = 0;
     }
 
@@ -67,7 +73,7 @@ namespace TMD.SIG {
         if (btnAprobarAdenda != null) {
           btnAprobarAdenda.Visible = !adenda.ESTADO.Equals("F");
           if (btnAprobarAdenda.Visible) {
-            btnAprobarAdenda.OnClientClick = string.Format("window.showModalDialog('FormCambioEstadoAdenda.aspx?tipo=Cambiar&idAdenda={0}', null, 'dialogWidth:700px; dialogHeight:450px; center:yes');", adenda.CODIGO_ADDENDA);
+            btnAprobarAdenda.OnClientClick = string.Format("openModal('FormCambioEstadoAdenda.aspx?tipo=Cambiar&idAdenda={0}');", adenda.CODIGO_ADDENDA);
           }
         }
       }
