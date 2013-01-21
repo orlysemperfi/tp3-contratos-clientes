@@ -85,6 +85,51 @@ namespace TMD.SIG {
         protected global::System.Web.UI.WebControls.Label txtFechaFin;
         
         /// <summary>
+        /// Control trMotivoVer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trMotivoVer;
+        
+        /// <summary>
+        /// Control txtMotivoVer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtMotivoVer;
+        
+        /// <summary>
+        /// Control trFechaTerminoVer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trFechaTerminoVer;
+        
+        /// <summary>
+        /// Control txtFechaTermino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtFechaTermino;
+        
+        /// <summary>
+        /// Control trEstadoCambiar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEstadoCambiar;
+        
+        /// <summary>
         /// Control ddlProximoEstado.
         /// </summary>
         /// <remarks>
@@ -94,22 +139,22 @@ namespace TMD.SIG {
         protected global::System.Web.UI.WebControls.DropDownList ddlProximoEstado;
         
         /// <summary>
-        /// Control trMotivo.
+        /// Control trMotivoCambiar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trMotivo;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trMotivoCambiar;
         
         /// <summary>
-        /// Control txtMotivo.
+        /// Control txtMotivoCambiar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMotivo;
+        protected global::System.Web.UI.WebControls.TextBox txtMotivoCambiar;
         
         /// <summary>
         /// Control btnAceptar.

@@ -127,8 +127,10 @@
                 <HeaderStyle Width="7%" HorizontalAlign="Center" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
                 <ItemStyle Font-Size="12px" HorizontalAlign="Center" />
                 <ItemTemplate>
+                  <asp:ImageButton ID="btnVerContrato" runat="server" Text="Ver Detalles" ImageUrl="~/Imagenes/view.png"
+                                   ToolTip="Ver" Height="24px" Width="24px" />&nbsp;
                   <asp:ImageButton ID="btnAprobarContrato" runat="server" Text="Cambiar Estado" ImageUrl="~/Imagenes/change_status.png"
-                                   OnClick="btnAprobarContrato_Click" ToolTip="Cambiar Estado" Height="24px" Width="24px" />
+                                   ToolTip="Cambiar Estado" Height="24px" Width="24px" />
                 </ItemTemplate>
               </asp:TemplateField>
             </Columns>

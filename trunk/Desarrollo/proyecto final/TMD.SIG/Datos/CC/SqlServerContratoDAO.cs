@@ -85,7 +85,7 @@ namespace Datos.CC {
           });
         }
         if (!string.IsNullOrEmpty(cliente)) {
-          sql.Append(" AND CLI.RAZON_SOCIAL = @NombreCliente ");
+          sql.Append(" AND CLI.RAZON_SOCIAL LIKE @NombreCliente ");
           listaParams.Add(new SqlParameter() {
             ParameterName = "NombreCliente",
             DbType = System.Data.DbType.String,
