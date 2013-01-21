@@ -19,6 +19,10 @@ namespace TMD.SIG {
       if (!IsPostBack) {
         CargarListaCombos();
         CargarListaContratos();
+      } else {
+        if (Request["ctl00$hdnPostBackAction"].Equals("btnBuscar")) {
+          CargarListaContratos();
+        }
       }
     }
 
@@ -36,7 +40,10 @@ namespace TMD.SIG {
     }
 
     private void CargarListaContratos() {
-      List<ContratoE> listaContratos = ContratoController.GetContratos(txtFiltroNumeroContrato.Text, txtFiltroDescripcion.Text, int.Parse(ddlFiltroServicio.SelectedValue), txtFiltroNombreCliente.Text);
+      List<ContratoE> listaContratos = ContratoController.GetContratos(txtFiltroNumeroContrato.Text,
+                                                                       txtFiltroDescripcion.Text,
+                                                                       int.Parse(ddlFiltroServicio.SelectedValue),
+                                                                       null);
       grdListadoContratos.DataSource = listaContratos;
       grdListadoContratos.DataBind();
     }
@@ -47,7 +54,6 @@ namespace TMD.SIG {
 
     protected void btnLimpiar_Click(object sender, EventArgs e) {
       txtFiltroDescripcion.Text = string.Empty;
-      txtFiltroNombreCliente.Text = string.Empty;
       txtFiltroNumeroContrato.Text = string.Empty;
       ddlFiltroServicio.SelectedIndex = 0;
     }
@@ -67,7 +73,7 @@ namespace TMD.SIG {
         if (btnAprobarContrato != null) {
           btnAprobarContrato.Visible = !contrato.ESTADO.Equals("R") && !contrato.ESTADO.Equals("C");
           if (btnAprobarContrato.Visible) {
-            btnAprobarContrato.OnClientClick = string.Format("window.showModalDialog('FormCambioEstadoContrato.aspx?tipo=Cambiar&idContrato={0}', null, 'dialogWidth:700px; dialogHeight:500px; center:yes');", contrato.CODIGO_CONTRATO);
+            btnAprobarContrato.OnClientClick = string.Format("return openModal('FormCambioEstadoContrato.aspx?tipo=Cambiar&idContrato={0}');", contrato.CODIGO_CONTRATO);
           }
         }
       }

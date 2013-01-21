@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Cambio de Estado de Contrato" Language="C#"
+﻿<%@ Page Title="TMD : Actualizar Estado de Contrato" Language="C#"
          MasterPageFile="~/Popup.master" AutoEventWireup="true"
          CodeBehind="FormCambioEstadoContrato.aspx.cs"
          Inherits="TMD.SIG.FormCambioEstadoContrato" %>
@@ -7,10 +7,25 @@
 <%@ Import Namespace="Entidades.CR" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+
+<script type="text/javascript">
+
+  function validateForm() {
+    var esValido = Page_ClientValidate("");
+    if (esValido) {
+      if (confirm('Esta seguro que desea realizar esta accion?\nUna vez ejecutada dicha accion, ya no se puede volver atras.')) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+</script>
+
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h2>Aprobar Contrato</h2>
+    <h2>Actualizar Estado de Contrato</h2>
     <hr />
     <p>Permite cambiar el estado de un Contrato o Adenda.</p>
     <table width="100%" align="center" border="0" cellpadding="1" cellspacing="1">
@@ -129,7 +144,8 @@
         </td>
         <td>&nbsp;</td>
         <td class="controlForms" colspan="5">
-          <asp:DropDownList ID="ddlProximoEstado" runat="server" />
+          <asp:DropDownList ID="ddlProximoEstado" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlProximoEstado_SelectedIndexChanged" CausesValidation="false" />
+          <asp:RequiredFieldValidator ID="rfvProximoEstado" runat="server" ControlToValidate="ddlProximoEstado" ErrorMessage="Debe seleccionar el Estado" Font-Bold="true" ForeColor="Red">*</asp:RequiredFieldValidator>
         </td>
       </tr>
       <tr id="trMotivoCambiar" runat="server">
@@ -138,7 +154,8 @@
         </td>
         <td>&nbsp;</td>
         <td class="controlForms" colspan="5">
-          <asp:TextBox ID="txtMotivoCambiar" runat="server" TextMode="MultiLine" Rows="4" Width="100%" />
+          <asp:TextBox ID="txtMotivoCambiar" runat="server" TextMode="MultiLine" Rows="4" Width="95%" />
+          <asp:RequiredFieldValidator ID="rfvMotivoCambiar" runat="server" Enabled="false" ControlToValidate="txtMotivoCambiar" ErrorMessage="Debe ingresar el Motivo" Font-Bold="true" ForeColor="Red">*</asp:RequiredFieldValidator>
         </td>
       </tr>
       <tr style="height:10px">
@@ -147,10 +164,11 @@
       <tr style="height:10px">
         <td colspan="7" align="right">
           <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="boton_01" 
-            OnClick="btnAceptar_Click" OnClientClick="return confirm('Esta seguro que desea realizar esta accion?\nUna vez ejecutada dicha accion, ya no se puede volver atras.')" />&nbsp;
+                      OnClick="btnAceptar_Click" OnClientClick="return validateForm();" />&nbsp;
           <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="boton_01" 
-            CausesValidation="false" OnClientClick="window.close();" />
+                      CausesValidation="false" OnClientClick="window.close();" />
         </td>
       </tr>
     </table>
+    <asp:ValidationSummary ID="vsErrores" runat="server" ShowMessageBox="true" ShowSummary="false" />
 </asp:Content>

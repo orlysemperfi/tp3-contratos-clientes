@@ -139,6 +139,15 @@ namespace TMD.SIG {
         protected global::System.Web.UI.WebControls.DropDownList ddlProximoEstado;
         
         /// <summary>
+        /// Control rfvProximoEstado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProximoEstado;
+        
+        /// <summary>
         /// Control trMotivoCambiar.
         /// </summary>
         /// <remarks>
@@ -157,6 +166,15 @@ namespace TMD.SIG {
         protected global::System.Web.UI.WebControls.TextBox txtMotivoCambiar;
         
         /// <summary>
+        /// Control rfvMotivoCambiar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMotivoCambiar;
+        
+        /// <summary>
         /// Control btnAceptar.
         /// </summary>
         /// <remarks>
@@ -173,5 +191,14 @@ namespace TMD.SIG {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelar;
+        
+        /// <summary>
+        /// Control vsErrores.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsErrores;
     }
 }

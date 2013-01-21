@@ -43,6 +43,10 @@ namespace TMD.SIG {
           if (paramTipo.Equals("Cambiar")) {
             //** Llenar la informacion del combo de estado
             List<EstadoContratoE> listaEstadoContrato = new List<EstadoContratoE>();
+            listaEstadoContrato.Add(new EstadoContratoE() {
+              CODIGO = "",
+              NOMBRE = "Seleccione..."
+            });
             if (contrato.ESTADO.Equals("E")) {
               listaEstadoContrato.Add(new EstadoContratoE() {
                 CODIGO = "F",
@@ -63,11 +67,11 @@ namespace TMD.SIG {
             ddlProximoEstado.DataSource = listaEstadoContrato;
             ddlProximoEstado.DataBind();
             //** Campo 'Estado'
-            trEstadoCambiar.Visible = (!contrato.ESTADO.Equals("E"));
+            trEstadoCambiar.Visible = (!contrato.ESTADO.Equals("R") && !contrato.ESTADO.Equals("C"));
             //** Campo 'Motivo'
             trFechaTerminoVer.Visible = false;
             trMotivoVer.Visible = false;
-            trMotivoCambiar.Visible = (!contrato.ESTADO.Equals("E"));
+            trMotivoCambiar.Visible = !contrato.ESTADO.Equals("E");
           } else if (paramTipo.Equals("Ver")) {
             //** Campo 'Motivo'
             trFechaTerminoVer.Visible = true;
@@ -84,6 +88,10 @@ namespace TMD.SIG {
       }
     }
 
+    protected void ddlProximoEstado_SelectedIndexChanged(object sender, EventArgs e) {
+      rfvMotivoCambiar.Enabled = ddlProximoEstado.SelectedValue.Equals("R");
+    }
+
     protected void btnAceptar_Click(object sender, EventArgs e) {
       //Obteniendo la data del Contrato
       string paramCodigoContrato = Request.QueryString["idContrato"];
@@ -94,13 +102,8 @@ namespace TMD.SIG {
         //** Invocar al SP (para actualizar las adendas)
         ContratoController.ActualizarAdendasYOtros(codigoContrato, ddlProximoEstado.SelectedValue, txtMotivoCambiar.Text);
       }
-      
+      ClientScript.RegisterStartupScript(this.GetType(), "JS-CloseWindow", "window.close();", true);
     }
-
-    protected void btnAprobarContrato_Click(object sender, EventArgs e) {
-      //
-    }
-    
 
   }
 

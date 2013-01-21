@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Cambio de Estado de Contrato" Language="C#"
+﻿<%@ Page Title="TMD : Actualizar Estado de Adenda" Language="C#"
          MasterPageFile="~/Popup.master" AutoEventWireup="true"
          CodeBehind="FormCambioEstadoAdenda.aspx.cs"
          Inherits="TMD.SIG.FormCambioEstadoAdenda" %>
@@ -10,7 +10,7 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h2>Aprobar Adenda</h2>
+    <h2>Actualizar Estado de Adenda</h2>
     <hr />
     <p>Permite cambiar el estado de una Adenda.</p>
     <table width="100%" align="center" border="0" cellpadding="1" cellspacing="1">
@@ -129,6 +129,7 @@
         <td>&nbsp;</td>
         <td class="controlForms" colspan="5">
           <asp:DropDownList ID="ddlProximoEstado" runat="server" />
+          <asp:RequiredFieldValidator ID="rfvProximoEstado" runat="server" ControlToValidate="ddlProximoEstado" ErrorMessage="Debe seleccionar el Estado" Font-Bold="true" ForeColor="Red">*</asp:RequiredFieldValidator>
         </td>
       </tr>
       <tr style="height:10px">
@@ -137,10 +138,11 @@
       <tr style="height:10px">
         <td colspan="7" align="right">
           <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="boton_01" 
-            OnClick="btnAceptar_Click" OnClientClick="return confirm('Esta seguro que desea realizar esta accion?\nUna vez ejecutada dicha accion, ya no se puede volver atras.')" />&nbsp;
+                      OnClick="btnAceptar_Click" OnClientClick="return confirm('Esta seguro que desea realizar esta accion?\nUna vez ejecutada dicha accion, ya no se puede volver atras.')" />&nbsp;
           <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="boton_01" 
-            CausesValidation="false" OnClientClick="window.close();" />
+                      CausesValidation="false" OnClientClick="window.close();" />
         </td>
       </tr>
     </table>
+    <asp:ValidationSummary ID="vsErrores" runat="server" ShowMessageBox="true" ShowSummary="false" />
 </asp:Content>

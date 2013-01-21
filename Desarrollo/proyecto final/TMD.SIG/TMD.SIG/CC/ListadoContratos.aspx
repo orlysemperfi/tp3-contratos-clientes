@@ -1,12 +1,27 @@
 ﻿<%@ Page Title="TMR : Listado de Contratos" Language="C#"
          MasterPageFile="~/Site.master" AutoEventWireup="true"
          CodeBehind="ListadoContratos.aspx.cs"
-         Inherits="TMD.SIG.ListadoContratos" %>
+         Inherits="TMD.SIG.ListadoContratos"
+         EnableEventValidation="false" %>
 
 <%@ Import Namespace="Entidades.CC" %>
 <%@ Import Namespace="Entidades.CR" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+
+<script type="text/javascript">
+
+  function openModal(url) {
+    var retVal = window.showModalDialog(url, null, 'dialogWidth:700px; dialogHeight:500px; center:yes');
+    var theForm = document.forms[0];
+    var action = document.getElementById("hdnPostBackAction");
+    action.value = 'btnBuscar';
+    theForm.submit();
+    return false;
+  }
+
+</script>
+
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
@@ -22,7 +37,7 @@
           N° de Contrato:
         </td>
         <td width="1%">&nbsp;</td>
-        <td class="labelForms" width="30%">
+        <td class="controlForms" width="30%">
           <asp:TextBox ID="txtFiltroNumeroContrato" runat="server" Width="90%" MaxLength="50" />
         </td>
         <td width="2%">&nbsp;</td>
@@ -30,7 +45,7 @@
           Descripcion:
         </td>
         <td width="1%">&nbsp;</td>
-        <td class="labelForms" width="30%">
+        <td class="controlForms" width="30%">
           <asp:TextBox ID="txtFiltroDescripcion" runat="server" Width="90%" MaxLength="50" />
         </td>
       </tr>
@@ -39,19 +54,11 @@
           Servicio:
         </td>
         <td>&nbsp;</td>
-        <td class="labelForms">
-          <asp:DropDownList ID="ddlFiltroServicio" runat="server" Width="90%">
+        <td class="controlForms" colspan="5">
+          <asp:DropDownList ID="ddlFiltroServicio" runat="server" Width="60%">
             <asp:ListItem Value="1" Text="Servicio 1" />
             <asp:ListItem Value="2" Text="Servicio 2" />
           </asp:DropDownList>
-        </td>
-        <td>&nbsp;</td>
-        <td class="labelForms">
-          Cliente:
-        </td>
-        <td>&nbsp;</td>
-        <td class="labelForms">
-          <asp:TextBox ID="txtFiltroNombreCliente" runat="server" Width="90%" MaxLength="60" />
         </td>
       </tr>
       <tr style="height:10px">
@@ -60,9 +67,9 @@
       <tr style="height:10px">
         <td colspan="7" align="right">
           <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="boton_01" 
-            onclick="btnBuscar_Click" />&nbsp;
+                      OnClick="btnBuscar_Click" />&nbsp;
           <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" CssClass="boton_01" 
-            CausesValidation="false" onclick="btnLimpiar_Click" />
+                      CausesValidation="false" OnClick="btnLimpiar_Click" />
         </td>
       </tr>
       <tr style="height:10px">
@@ -127,10 +134,10 @@
                 <HeaderStyle Width="7%" HorizontalAlign="Center" Font-Size="12px" BackColor="#3A4F63" ForeColor="#FFFFFF" />
                 <ItemStyle Font-Size="12px" HorizontalAlign="Center" />
                 <ItemTemplate>
-                  <asp:ImageButton ID="btnVerContrato" runat="server" Text="Ver Detalles" ImageUrl="~/Imagenes/view.png"
-                                   ToolTip="Ver" Height="24px" Width="24px" />&nbsp;
-                  <asp:ImageButton ID="btnAprobarContrato" runat="server" Text="Cambiar Estado" ImageUrl="~/Imagenes/change_status.png"
-                                   ToolTip="Cambiar Estado" Height="24px" Width="24px" />
+                  <asp:ImageButton ID="btnVerContrato" runat="server" ImageUrl="~/Imagenes/view.png"
+                                   ToolTip="Ver" Height="24px" Width="24px" PostBackUrl="" />&nbsp;
+                  <asp:ImageButton ID="btnAprobarContrato" runat="server" ImageUrl="~/Imagenes/change_status.png"
+                                   ToolTip="Cambiar Estado" Height="24px" Width="24px" PostBackUrl="" />
                 </ItemTemplate>
               </asp:TemplateField>
             </Columns>

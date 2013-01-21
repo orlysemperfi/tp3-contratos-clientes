@@ -1,12 +1,27 @@
 ﻿<%@ Page Title="TMR : Listado de Adendas" Language="C#"
          MasterPageFile="~/Site.master" AutoEventWireup="true"
          CodeBehind="ListadoAdendas.aspx.cs"
-         Inherits="TMD.SIG.ListadoAdendas" %>
+         Inherits="TMD.SIG.ListadoAdendas"
+         EnableEventValidation="false" %>
 
 <%@ Import Namespace="Entidades.CC" %>
 <%@ Import Namespace="Entidades.CR" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+
+<script type="text/javascript">
+
+  function openModal(url) {
+    var retVal = window.showModalDialog(url, null, 'dialogWidth:700px; dialogHeight:500px; center:yes');
+    var theForm = document.forms[0];
+    var action = document.getElementById("hdnPostBackAction");
+    action.value = 'btnBuscar';
+    theForm.submit();
+    return false;
+  }
+
+</script>
+
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
@@ -22,11 +37,11 @@
           N° de Contrato:
         </td>
         <td width="1%">&nbsp;</td>
-        <td class="labelForms" width="30%">
+        <td class="controlForms" width="30%">
           <asp:TextBox ID="txtFiltroNumeroContrato" runat="server" Width="90%" MaxLength="15" />
         </td>
         <td width="2%">&nbsp;</td>
-        <td class="labelForms" width="18%">
+        <td class="controlForms" width="18%">
           N° de Adenda:
         </td>
         <td width="1%">&nbsp;</td>
@@ -39,19 +54,11 @@
           Servicio:
         </td>
         <td>&nbsp;</td>
-        <td class="labelForms">
-          <asp:DropDownList ID="ddlFiltroServicio" runat="server" Width="90%">
+        <td class="controlForms" colspan="5">
+          <asp:DropDownList ID="ddlFiltroServicio" runat="server" Width="60%">
             <asp:ListItem Value="1" Text="Servicio 1" />
             <asp:ListItem Value="2" Text="Servicio 2" />
           </asp:DropDownList>
-        </td>
-        <td>&nbsp;</td>
-        <td class="labelForms">
-          Cliente:
-        </td>
-        <td>&nbsp;</td>
-        <td class="labelForms">
-          <asp:TextBox ID="txtFiltroNombreCliente" runat="server" Width="90%" MaxLength="60" />
         </td>
       </tr>
       <tr style="height:10px">
