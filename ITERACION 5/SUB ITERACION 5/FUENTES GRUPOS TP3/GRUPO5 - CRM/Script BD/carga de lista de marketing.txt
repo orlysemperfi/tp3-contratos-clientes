@@ -1,0 +1,2 @@
+Nombre 1,0,SW S.A,22311112091,1,Informatica,Gerente General,3751266,fer@gmail.com,Ninguna,mmmmm,41801603
+Nombre 2,0,Informix PLUS S.A,2236666111,1,Informatica,Supervisor,3751466,luc@gmail.com,Ninguna,nnnnnnn,41801604
