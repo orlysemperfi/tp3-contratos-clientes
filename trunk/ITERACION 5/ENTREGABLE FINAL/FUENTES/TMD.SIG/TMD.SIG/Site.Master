@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TMD.SIG.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<script language = "javascript" type="text/javascript">
+    function SelectAllCheckboxes(CheckBoxControl, VarGrilla) {
+        var i;
+        for (i = 0; i < document.forms[0].elements.length; i++) {
+            if ((document.forms[0].elements[i].type == 'checkbox') && (document.forms[0].elements[i].name.indexOf(VarGrilla) > -1)) {
+                if (document.forms[0].elements[i].checked != CheckBoxControl.checked)
+                { document.forms[0].elements[i].click(); }
+            }
+        }
+    }
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    TMD - Sistema de Gestión de Contratos
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Pantalla de bienvenida <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Página principal"/>
+                        <asp:MenuItem Text="Cliente">
+                            <asp:MenuItem NavigateUrl="~/CC/Acliente.aspx" Text="Agregar Cliente">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CC/ActCliente.aspx" Text="Actualizar Cliente">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Contratos" Value="Contratos" >
+                            <asp:MenuItem NavigateUrl="~/CC/AgregarContrato.aspx" Text="Agregar Contrato" 
+                                Value="Agregar Contrato"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CC/addenda.aspx" 
+                                Text="Agregar Addenda" Value="Registrar Addenda"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/CC/AgregarIncumplimiento.aspx" 
+                            Text="Incumplimiento"/>
+                        <asp:MenuItem NavigateUrl="#" Text="Actualizar Estados">
+                          <asp:MenuItem NavigateUrl="~/CC/ListadoContratos.aspx" Text="Contratos" />
+                          <asp:MenuItem NavigateUrl="~/CC/ListadoAdendas.aspx" Text="Adendas" />
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/CC/MonitoreoContratos.aspx" 
+                            Text="Monitoreo de Contratos" Value="Monitoreo de Contratos"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

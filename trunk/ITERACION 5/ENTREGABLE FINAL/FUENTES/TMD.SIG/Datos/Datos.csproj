@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33AE4671-1699-4DF3-A871-7EB3F8686834}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Datos</RootNamespace>
+    <AssemblyName>Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CC\AddendaDAO.cs" />
+    <Compile Include="CC\ClausulaDAO.cs" />
+    <Compile Include="CC\ClienteDAO.cs" />
+    <Compile Include="CC\ContratoDAO.cs" />
+    <Compile Include="CC\EntregableDAO.cs" />
+    <Compile Include="CC\IAddendaDAO.cs" />
+    <Compile Include="CC\IClausulaDAO.cs" />
+    <Compile Include="CC\IClienteDAO.cs" />
+    <Compile Include="CC\IContratoDAO.cs" />
+    <Compile Include="CC\IEntregableDAO.cs" />
+    <Compile Include="CC\IIncumplimientoDAO.cs" />
+    <Compile Include="CC\IIndicadorDAO.cs" />
+    <Compile Include="CC\ILineaServicioDAO.cs" />
+    <Compile Include="CC\IMonedaDAO.cs" />
+    <Compile Include="CC\IncumplimientoDAO.cs" />
+    <Compile Include="CC\IndicadorDAO.cs" />
+    <Compile Include="CC\IOventaDAO.cs" />
+    <Compile Include="CC\IRolDAO.cs" />
+    <Compile Include="CC\IServicioDAO.cs" />
+    <Compile Include="CC\ITipoClausulaDAO.cs" />
+    <Compile Include="CC\LineaServicioDAO.cs" />
+    <Compile Include="CC\MonedaDAO.cs" />
+    <Compile Include="CC\OventaDAO.cs" />
+    <Compile Include="CC\RolDAO.cs" />
+    <Compile Include="CC\ServicioDAO.cs" />
+    <Compile Include="CC\TipoClausulaDAO.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="GEN\ConexionDAO.cs" />
+    <Compile Include="GEN\IOrganizacionDAO.cs" />
+    <Compile Include="GEN\OrganizacionDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{ADC30D7E-5FA7-4EB0-B8BF-9C61F610E8EA}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
