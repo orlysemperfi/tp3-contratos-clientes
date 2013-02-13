@@ -1,8 +1,0 @@
-Plan de prubas
-1 Plan de pruebas---Gaby
-2 Requerimientos de prueba --- Pablo
-3 Responsables pruebas -- cada uno
-4 Planificacion de pruebas -- cada uno
-5 Riesgos y contingencia -- Orlando
-6 Estrategia de pruebas -- Orlando
-7 Casos de pruebas -- todos
